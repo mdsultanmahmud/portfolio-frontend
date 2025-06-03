@@ -68,3 +68,13 @@ h1 span {
   cursor: pointer;
   display: block;
 }
+
+@media screen and (max-width: 767px) {
+  .portfolio__contact__container {
+    margin-top: 2rem;
+  }
+  .portfolio__contact__info {
+    flex-direction: column;
+    gap: 3rem;
+  }
+}

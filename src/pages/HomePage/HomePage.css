@@ -14,7 +14,7 @@
 .portfolio__homepage__container h1 span {
   color: var(--primary);
 }
-.portfolio__homepage__container h2 {
+.portfolio__homepage__container h2 , .portfolio__homepage__container h2 span{
   font-size: 1.5rem;
   font-weight: 800;
 }
@@ -29,4 +29,14 @@
   color: #fff;
   outline: none;
   cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .portfolio__homepage__container h1 {
+    font-size: 2rem;
+  }
+  .portfolio__homepage__container h2 {
+  font-size: 1.2rem;
+  font-weight: 800;
+}
 }
