@@ -16,17 +16,17 @@ const App = () => {
       <RouterProvider router={router} />
       <AnimatedCursor
         innerSize={6}
-        outerSize={30}
-        color="#4169e4"
+        outerSize={40}
+        color="#ec494d"
         outerAlpha={0.3}
         innerScale={0.8}
         outerScale={4.5}
         hasBlendMode={true}
         trailingSpeed={8}
         outerStyle={{
-          border: "2px solid #4169e4",
+          border: "2px solid #ec494d",
         }}
-        innerStyle={{ backgroundColor: "#4169e4" }}
+        innerStyle={{ backgroundColor: "#ec494d" }}
         clickables={[
           "a",
           'input[type="text"]',

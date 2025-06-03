@@ -1,0 +1,70 @@
+.portfolio__contact__container {
+  width: 100%;
+  margin-top: 7rem;
+}
+
+.portfolio__contact__inner__container h1 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  border-bottom: 2px dashed var(--primary);
+  padding-bottom: 2rem;
+}
+h1 span {
+  color: var(--primary);
+  font-weight: 800;
+}
+
+.portfolio__contact__info {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+}
+
+.contact__info {
+  background-color: var(--secondary);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8rem 1rem;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.contact__info span {
+  color: var(--primary);
+}
+
+.portfolio__contact__form {
+  flex-grow: 1;
+}
+
+.portfolio__contact__form .form__group input,
+.portfolio__contact__form .form__group textarea {
+  background-color: var(--secondary);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8rem 1rem;
+  font-size: 0.9rem;
+  color: #fff;
+  width: 100%;
+}
+.portfolio__contact__form .form__group textarea {
+  min-height: 100px;
+  resize: none;
+}
+
+.portfolio__contact__form button {
+  margin: 1rem auto;
+  padding: 0.6rem 2rem;
+  border-radius: 2rem;
+  background-color: var(--primary);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  display: block;
+}
