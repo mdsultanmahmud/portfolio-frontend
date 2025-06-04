@@ -10,6 +10,7 @@
 .portfolio__project__item {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
   background-color: transparent;
   align-items: center;
   grid-template-areas: "info img";
@@ -24,6 +25,8 @@
   font-size: 1.5rem;
   color: var(--primary);
   font-weight: 700;
+  border-bottom: 1px dashed var(--primary);
+  padding-bottom: 0.5rem;
 }
 .project__item__info p {
   font-size: 0.9rem;
@@ -44,8 +47,15 @@
 .project__item__info ul li span:first-child {
   color: var(--primary);
 }
+
+.portfolio__item__button__continer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .project__item__info button {
-  padding: 0.6rem 2rem;
+  padding: 0.5rem 1.5rem;
   border-radius: 1rem;
   background-color: var(--primary);
   color: #fff;
@@ -98,6 +108,10 @@
   opacity: 1;
 }
 
+.portfolio__modal__content {
+  overflow: auto !important;
+  max-height: 100% !important;
+}
 
 @media screen and (max-width: 767px) {
   .portfolio__project__items {
