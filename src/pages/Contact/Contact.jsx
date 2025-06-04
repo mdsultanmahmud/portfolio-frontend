@@ -32,7 +32,7 @@ const Contact = () => {
   return (
     <div className="portfolio__contact__container slide__up">
       <div className="portfolio__contact__inner__container">
-        <h1>
+        <h1 className="general__heading"> 
           Get In <span>Touch</span>
         </h1>
         <div className="portfolio__contact__info">

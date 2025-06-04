@@ -1,0 +1,115 @@
+.portfolio__project__items {
+  width: 100%;
+  height: 430px;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  background-color: var(--secondary);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.portfolio__project__item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: transparent;
+  align-items: center;
+  grid-template-areas: "info img";
+}
+.project__item__info {
+  text-align: left;
+  padding: 2rem 1rem;
+  grid-area: info;
+}
+
+.project__item__info h2 {
+  font-size: 1.5rem;
+  color: var(--primary);
+  font-weight: 700;
+}
+.project__item__info p {
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+.project__item__info ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.project__item__info ul li {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  gap: 0.8rem;
+}
+.project__item__info ul li span:first-child {
+  color: var(--primary);
+}
+.project__item__info button {
+  padding: 0.6rem 2rem;
+  border-radius: 1rem;
+  background-color: var(--primary);
+  color: #fff;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  margin-top: 2rem;
+  cursor: pointer !important;
+}
+
+.project__item__info button:hover {
+  background-color: #fff;
+  color: var(--primary);
+}
+.project__item__img {
+  grid-area: img;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 350px !important;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.swiper-pagination {
+  background-color: var(--secondary);
+  padding: 5px 10px;
+  border-radius: 5px;
+  width: fit-content;
+  margin: 0 auto;
+}
+.swiper-pagination-bullet {
+  background-color: var(--primary) !important;
+  opacity: 1;
+}
+
+
+@media screen and (max-width: 767px) {
+  .portfolio__project__items {
+    height: 750px;
+  }
+  .portfolio__project__item {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "img"
+      "info";
+  }
+  .project__item__info h2 {
+    font-size: 1.2rem;
+  }
+}

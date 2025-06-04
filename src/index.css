@@ -57,6 +57,22 @@ textarea {
   border-radius: 1rem;
 }
 
+.scroll__hidden {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scroll__hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.general__heading {
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  border-bottom: 2px dashed var(--primary);
+  padding-bottom: 2rem;
+}
+
 @media screen and (max-width: 991px) {
   body {
     width: 80%;

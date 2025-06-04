@@ -69,6 +69,11 @@ h1 span {
   display: block;
 }
 
+.portfolio__contact__form button:hover {
+  background-color: #fff;
+  color: var(--primary);
+}
+
 @media screen and (max-width: 767px) {
   .portfolio__contact__container {
     margin-top: 2rem;

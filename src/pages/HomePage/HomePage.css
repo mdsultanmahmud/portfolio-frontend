@@ -14,7 +14,8 @@
 .portfolio__homepage__container h1 span {
   color: var(--primary);
 }
-.portfolio__homepage__container h2 , .portfolio__homepage__container h2 span{
+.portfolio__homepage__container h2,
+.portfolio__homepage__container h2 span {
   font-size: 1.5rem;
   font-weight: 800;
 }
@@ -29,6 +30,12 @@
   color: #fff;
   outline: none;
   cursor: pointer;
+  transition: all ease-in-out 0.3s;
+  font-weight: 600;
+}
+.portfolio__homepage__container button:hover {
+  background-color: #fff;
+  color: var(--primary);
 }
 
 @media screen and (max-width: 767px) {
@@ -36,7 +43,7 @@
     font-size: 2rem;
   }
   .portfolio__homepage__container h2 {
-  font-size: 1.2rem;
-  font-weight: 800;
-}
+    font-size: 1.2rem;
+    font-weight: 800;
+  }
 }
