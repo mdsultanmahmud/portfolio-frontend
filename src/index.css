@@ -24,6 +24,7 @@ body {
   overflow-x: hidden;
   background: transparent;
   color: #fff;
+  scrollbar-width: none;
 }
 body {
   width: 800px;
@@ -69,8 +70,8 @@ textarea {
   font-size: 1.8rem;
   font-weight: 800;
   letter-spacing: 1px;
-  border-bottom: 2px dashed var(--primary);
-  padding-bottom: 2rem;
+  border-bottom: 1px dashed var(--primary);
+  padding-bottom: 1rem;
 }
 
 @media screen and (max-width: 991px) {

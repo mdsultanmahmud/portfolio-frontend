@@ -199,7 +199,7 @@ const Portfolio = () => {
 
   return (
     <>
-      <div className="portfolio__page__container slide__up scroll__width">
+      <div className="portfolio__page__container slide__up">
         <div className="portfolio__page__inner__container">
           <h1 className="general__heading">
             Creative <span>Portfolio</span>
