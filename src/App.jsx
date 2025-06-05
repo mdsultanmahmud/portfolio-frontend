@@ -15,8 +15,8 @@ const App = () => {
      
       <RouterProvider router={router} />
       <AnimatedCursor
-        innerSize={6}
-        outerSize={40}
+        innerSize={8}
+        outerSize={30}
         color="#ec494d"
         outerAlpha={0.3}
         innerScale={0.8}

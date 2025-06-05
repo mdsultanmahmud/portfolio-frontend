@@ -3,6 +3,7 @@
 :root {
   --primary: #ec494d;
   --secondary: #222222;
+  --text:#b9b7b7;
 }
 
 *,
@@ -83,5 +84,8 @@ textarea {
 @media screen and (max-width: 767px) {
   body {
     width: 95%;
+  }
+  .general__heading{
+    font-size: 1.5rem;
   }
 }

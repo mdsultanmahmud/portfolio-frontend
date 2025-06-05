@@ -3,18 +3,6 @@
   margin-top: 5rem;
 }
 
-.portfolio__contact__inner__container h1 {
-  font-size: 1.8rem;
-  font-weight: 800;
-  letter-spacing: 1px;
-  border-bottom: 2px dashed var(--primary);
-  padding-bottom: 2rem;
-}
-h1 span {
-  color: var(--primary);
-  font-weight: 800;
-}
-
 .portfolio__contact__info {
   margin-top: 3rem;
   display: flex;

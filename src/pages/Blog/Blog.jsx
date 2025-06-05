@@ -5,6 +5,7 @@ import blog2 from "../../assets/ec2.jpg";
 import blog3 from "../../assets/ec3.png";
 import blog4 from "../../assets/pro5.png";
 import blog5 from "../../assets/pro3.PNG";
+import { useNavigate } from "react-router-dom";
 const Blog = () => {
   const blogs = [
     {
@@ -72,6 +73,7 @@ const Blog = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [selectedBlog, setSelectedBlog] = useState(blogs);
   const containerRef = useRef();
+  const navigation = useNavigate();
   const categories = [
     "All",
     "Web Development",
@@ -123,12 +125,14 @@ const Blog = () => {
               <div className="blog__info__container">
                 <h2>{blog?.title}</h2>
                 <p>{blog?.description.slice(0, 100)}...</p>
-                {/* <div className="blog__info">
-                                <span className="blog__date">{blog?.date}</span>
-                                <span className="blog__author">{blog?.author}</span>
-                                <span className="blog__time">{blog?.time}</span>
-                            </div> */}
-                <button>Read More</button>
+
+                <button
+                  onClick={() => {
+                    navigation(`/blog/20`);
+                  }}
+                >
+                  Read More
+                </button>
               </div>
             </div>
           );
