@@ -7,7 +7,7 @@ const CustomModal = ({ isOpen, onClose, children }) => {
   return (
     <div className="portfolio__modal__overlay" onClick={onClose}>
       <div
-        className="portfolio__modal__container scroll__hidden"
+        className="portfolio__modal__container scroll__hidden slide__up"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="portfolio__modal__close" onClick={onClose}>
