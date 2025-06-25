@@ -6,149 +6,101 @@ import { Mousewheel, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/bundle";
-import pro1 from "../../assets/pro1.jpg";
-import pro2 from "../../assets/ec1.png";
-import pro3 from "../../assets/ec2.jpg";
+import pro1 from "../../assets/pro1.png";
+import pro2 from "../../assets/pro2.png";
+import pro3 from "../../assets/pro3.png";
 import pro4 from "../../assets/pro4.png";
-import pro5 from "../../assets/ec3.png";
+import pro5 from "../../assets/pro5.png";
 import { FaCheck } from "react-icons/fa";
 import CustomModal from "../../components/CustomModal/CustomModal";
+import { useNavigate } from "react-router-dom";
 
 const Portfolio = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
+  const navigate = useNavigate();
   const projects = [
     {
-      title: "Modern Portfolio Website for Developers",
+      title: "Shock — NFC Card Selling Website",
       description:
-        "A clean, responsive site to showcase developer projects and skills.",
+        "A modern web platform for selling customizable NFC cards with a personalized public profile system.",
       features: [
-        "Responsive design",
-        "Dark/light mode",
-        "Smooth scroll",
-        "Project filter",
-        "Contact form",
-      ],
-      img: pro1,
-    },
-    {
-      title: "E-commerce Platform for Electronics",
-      description:
-        "A full-featured online store with cart, payment, and dashboard.",
-      features: [
-        "Product search",
-        "Cart system",
-        "Payment gateway",
-        "Admin panel",
-        "Order tracking",
-      ],
-      img: pro2,
-    },
-    {
-      title: "Educational Blog for Students",
-      description:
-        "A blog platform offering helpful content and guides for learners.",
-      features: [
-        "Category filter",
-        "Markdown editor",
-        "Comment system",
-        "Reading progress",
-        "SEO optimized",
-      ],
-      img: pro3,
-    },
-    {
-      title: "Task Management App with Drag & Drop",
-      description:
-        "A simple tool to organize tasks visually and boost productivity.",
-      features: [
-        "Kanban board",
-        "Drag and drop",
-        "Due dates",
-        "Priority labels",
-        "User auth",
-      ],
-      img: pro4,
-    },
-    {
-      title: "Restaurant Website with Online Menu",
-      description:
-        "Showcase restaurant dishes with an interactive, mobile-friendly layout.",
-      features: [
-        "Menu filter",
-        "Reservation form",
-        "Gallery slider",
-        "Reviews section",
-        "Google Maps",
-      ],
-      img: pro5,
-    },
-    {
-      title: "Real Estate Listing Platform",
-      description:
-        "Browse, filter, and contact for available homes and apartments.",
-      features: [
-        "Advanced filters",
-        "Property details",
-        "Agent contact",
-        "Favorites list",
-        "Image gallery",
-      ],
-      img: pro1,
-    },
-    {
-      title: "Event Management Web App",
-      description:
-        "Manage events, registrations, and participants all in one place.",
-      features: [
-        "Event calendar",
-        "Online booking",
-        "QR check-in",
         "User dashboard",
-        "Notifications",
+        "Admin dashboard",
+        "Light/Dark theme toggle",
+        "Card customization",
+        "Public profile for each card",
       ],
+      technology: [
+        "React",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Bcrypt",
+        "JWT",
+      ],
+      img: pro1,
+      demo: "https://shocknfc.netlify.app/",
+    },
+    {
+      title: "RMG Review — Garments Sector Q&A Platform",
+      description:
+        "A garments industry-focused learning and job portal featuring premium content and interactive tools.",
+      features: [
+        "Access to paid and unpaid articles",
+        "User and admin dashboards",
+        "Job circular and notices",
+        "Document download support",
+        "Live calculation features",
+      ],
+      technology: ["React", "Node.js", "Express.js", "MySQL", "Bcrypt", "JWT"],
       img: pro2,
+      demo: "https://m.reviewrmg.app/",
     },
     {
-      title: "Fitness Tracker Dashboard",
+      title: "Elevator Engineers — Product Agency Website",
       description:
-        "Track workouts, set goals, and monitor health metrics easily.",
+        "A professional agency site showcasing elevator product videos, bestsellers, and customer solutions.",
       features: [
-        "Step counter",
-        "Workout log",
-        "BMI calculator",
-        "Goal tracker",
-        "Dark mode",
+        "Responsive agency portfolio",
+        "Elevator product showcase",
+        "Product video section",
+        "Sell history tracker",
+        "Top-selling product highlights",
       ],
+      technology: ["Next.js", "Tailwind CSS"],
       img: pro3,
+      demo: "https://elavator-engineers.netlify.app/",
     },
     {
-      title: "Job Portal for Tech Professionals",
+      title: "SAAREP — Agency Profile & Membership Site",
       description:
-        "A platform for job seekers and recruiters in the tech industry.",
+        "An elegant portfolio website representing an agency’s mission, team, and online membership system.",
       features: [
-        "Resume upload",
-        "Job alerts",
-        "Company reviews",
-        "Apply button",
-        "Saved jobs",
+        "Mission and vision display",
+        "Important persons showcase",
+        "PayPal payment integration",
+        "Membership claim functionality",
       ],
+      technology: ["React", "React Bootstrap"],
       img: pro4,
+      demo: "https://soft-horse-b708ef.netlify.app/",
     },
     {
-      title: "Travel Blog with Interactive Map",
+      title: "Typing Test — Speed and Accuracy Practice",
       description:
-        "Explore travel stories with location pins and guides on map.",
+        "A simple and focused typing test app where users can measure their typing speed and accuracy in real-time.",
       features: [
-        "Map markers",
-        "Blog categories",
-        "Photo gallery",
-        "Search bar",
-        "Share buttons",
+        "Typing content display",
+        "Typing speed tracking",
+        "Typing time counter",
+        "Real-time accuracy check",
       ],
+      technology: ["React"],
       img: pro5,
+      demo: "https://zingy-profiterole-258442.netlify.app/",
     },
   ];
+
   const project = `
     <h2><strong>🔷 Project Title:</strong></h2>
     <p><strong>ReviewRMG – Garments Industry Review Platform</strong></p>
@@ -226,7 +178,7 @@ const Portfolio = () => {
                       <div className="project__item__info">
                         <h2>{project.title}</h2>
                         <p>{project.description}</p>
-                        <ul>
+                        <ul className="features__container">
                           {project.features.map((feature, idx) => (
                             <li key={idx}>
                               <span>
@@ -236,11 +188,22 @@ const Portfolio = () => {
                             </li>
                           ))}
                         </ul>
+                        {/* <ul className="technology__container">
+                          {project.technology.map((tech, idx) => (
+                            <li key={idx}>
+                              {tech}
+                            </li>
+                          ))}
+                        </ul> */}
                         <div className="portfolio__item__button__continer">
-                          <button onClick={() => setIsModalOpen(true)}>
+                          {/* <button onClick={() => setIsModalOpen(true)}>
                             View Details
+                          </button> */}
+                          <button
+                            onClick={() => window.open(project?.demo, "_blank")}
+                          >
+                            View Project
                           </button>
-                          <button>View Project</button>
                         </div>
                       </div>
                       <div className="project__item__img">

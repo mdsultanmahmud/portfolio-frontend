@@ -1,6 +1,6 @@
 import React from "react";
 import "./AboutUsDetails.css";
-import profilePic from "../../assets/pro1.jpg";
+import profilePic from "../../assets/profile.png";
 import { IoMdPerson } from "react-icons/io";
 import { CiCalendarDate } from "react-icons/ci";
 import { IoLocation } from "react-icons/io5";

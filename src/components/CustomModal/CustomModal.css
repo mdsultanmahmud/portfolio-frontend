@@ -20,7 +20,7 @@
   height: 600px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
   position: relative;
-  overflow: hidden;
+  overflow-y: auto;
 }
 
 .portfolio__modal__close {
