@@ -49,12 +49,12 @@ const Navbar = () => {
           >
             Portfolio
           </li>
-          <li
+          {/* <li
             className={`${location.pathname === "/blog" ? "active" : ""}`}
             onClick={() => onClickHandler("/blog")}
           >
             Blog
-          </li>
+          </li> */}
           <li
             className={`${location.pathname === "/contact" ? "active" : ""}`}
             onClick={() => onClickHandler("/contact")}

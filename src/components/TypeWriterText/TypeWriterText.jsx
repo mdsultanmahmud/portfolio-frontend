@@ -12,7 +12,6 @@ const TypeWriterText = () => {
             "Next.js Enthusiast",
             "Full-Stack Web Engineer",
             "Creative Frontend Architect",
-            "Dashboard UI Specialist",
             "E-commerce Web App Builder",
             "React & Redux Expert",
             "Performance-Focused Coder",

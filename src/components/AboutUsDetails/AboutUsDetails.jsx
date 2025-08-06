@@ -21,6 +21,13 @@ import vps from "../../assets/vps.jpg";
 import vercel from "../../assets/vercel.png";
 import netlify from "../../assets/netlify.png";
 import firebase from "../../assets/firebase.png";
+import bootstrap from '../../assets/bootstrap.png'; 
+import CSS from '../../assets/css.png'; 
+import htmlpic from '../../assets/html.jpg'
+import daisyUi from '../../assets/daisy.png'
+import tailwind from '../../assets/tailwind.png'
+import github from '../../assets/git.png'; 
+import sql from '../../assets/sql.png'
 const AboutUsDetails = () => {
   const services = [
     "Full-Stack Web Application Development (React, Node.js, Express, MongoDB)",
@@ -43,6 +50,7 @@ const AboutUsDetails = () => {
     mongodb,
     mongoose,
     mysql,
+    sql,
     JavaSc,
     python,
     redux,
@@ -50,6 +58,12 @@ const AboutUsDetails = () => {
     vercel,
     netlify,
     firebase,
+    github,
+    tailwind,
+    bootstrap,
+    daisyUi,
+    CSS,
+    htmlpic,
   ];
   const info = [
     {
@@ -165,7 +179,7 @@ const AboutUsDetails = () => {
               <h3>2021-2025</h3>
               <div>
                 <h2>Rajshahi University</h2>
-                <p>BSc. in Statistics(present)</p>
+                <p>BSc. in Statistics</p>
               </div>
             </div>
             <div className="education__content__item">

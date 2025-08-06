@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Portfolio.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 // import required modules
@@ -10,14 +10,14 @@ import pro1 from "../../assets/pro1.png";
 import pro2 from "../../assets/pro2.png";
 import pro3 from "../../assets/pro3.png";
 import pro4 from "../../assets/pro4.png";
-import pro5 from "../../assets/pro5.png";
+import pro5 from "../../assets/mentors.png";
 import { FaCheck } from "react-icons/fa";
-import CustomModal from "../../components/CustomModal/CustomModal";
-import { useNavigate } from "react-router-dom";
+// import CustomModal from "../../components/CustomModal/CustomModal";
+// import { useNavigate } from "react-router-dom";
 
 const Portfolio = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const navigate = useNavigate();
+  // const [isModalOpen, setIsModalOpen] = useState(false);
+  // const navigate = useNavigate();
   const projects = [
     {
       title: "Shock — NFC Card Selling Website",
@@ -86,68 +86,22 @@ const Portfolio = () => {
       demo: "https://soft-horse-b708ef.netlify.app/",
     },
     {
-      title: "Typing Test — Speed and Accuracy Practice",
+      title: "Mentors4Data — Data Science & Web Development Agency",
       description:
-        "A simple and focused typing test app where users can measure their typing speed and accuracy in real-time.",
+        "Mentors4Data is a modern startup landing page offering two major services: Data Analysis and Web Development.",
       features: [
-        "Typing content display",
-        "Typing speed tracking",
-        "Typing time counter",
-        "Real-time accuracy check",
+        " A clean and modern landing page",
+        " FAQ section with smooth toggle animation",
+        "A detailed and responsive footer",
+        "Filtering Courses page",
       ],
-      technology: ["React"],
+      technology: ["Next.js", "Tailwind CSS"],
       img: pro5,
-      demo: "https://zingy-profiterole-258442.netlify.app/",
+      demo: "https://mentors4data.netlify.app",
     },
   ];
 
-  const project = `
-    <h2><strong>🔷 Project Title:</strong></h2>
-    <p><strong>ReviewRMG – Garments Industry Review Platform</strong></p>
-
-    <h3><strong>🔶 Short Description:</strong></h3>
-    <p>ReviewRMG is a comprehensive web platform built to connect global buyers, workers, and stakeholders with ready-made garments (RMG) factories and service providers across Bangladesh. It allows users to discover, rate, and review garment factories based on compliance, worker safety, product quality, and customer service.</p>
-
-    <h3><strong>🧩 Key Features:</strong></h3>
-    <ul>
-      <li><strong>Factory Listings & Profiles:</strong> Dedicated pages with factory info, certifications, images, and map location.</li>
-      <li><strong>User Reviews & Ratings:</strong> Review factories based on Quality, Compliance, and more.</li>
-      <li><strong>Category-based Browsing:</strong> Filter factories by type, location, and certification.</li>
-      <li><strong>Search & Filters:</strong> Advanced filtering with keyword support.</li>
-      <li><strong>Admin Dashboard:</strong> Factory, review, and announcement management.</li>
-      <li><strong>User Dashboard:</strong> Saved factories and review history.</li>
-      <li><strong>Authentication:</strong> JWT-based secure login for users and admins.</li>
-      <li><strong>Responsive UI:</strong> Mobile-first design using React and Tailwind.</li>
-      <li><strong>Real-Time Notifications:</strong> Live alerts via Socket.io.</li>
-      <li><strong>Blog Section:</strong> News and insights from the industry.</li>
-    </ul>
-
-    <h3><strong>⚙️ Technologies Used:</strong></h3>
-    <ul>
-      <li><strong>Frontend:</strong> React.js, Tailwind CSS, Redux Toolkit</li>
-      <li><strong>Backend:</strong> Node.js, Express.js, MySQL</li>
-      <li><strong>Authentication:</strong> JWT, Bcrypt</li>
-      <li><strong>Real-Time:</strong> Socket.io</li>
-      <li><strong>Uploads:</strong> Multer for local image handling</li>
-      <li><strong>Map:</strong> Google Maps Embed API</li>
-      <li><strong>Deployment:</strong> VPS with Nginx + PM2</li>
-    </ul>
-
-    <h3><strong>🎯 Project Goals:</strong></h3>
-    <ul>
-      <li>Increase transparency in the RMG sector</li>
-      <li>Empower buyers and workers to share real feedback</li>
-      <li>Central hub for trusted RMG factory reviews</li>
-    </ul>
-
-    <h3><strong>💡 Possible Enhancements:</strong></h3>
-    <ul>
-      <li>Factory verification using uploaded certificates</li>
-      <li>Live chat between buyers and admins</li>
-      <li>Multi-language support (Bengali, English)</li>
-      <li>Public API access for external use</li>
-    </ul>
-  `;
+  
 
   return (
     <>
@@ -202,11 +156,18 @@ const Portfolio = () => {
                           <button
                             onClick={() => window.open(project?.demo, "_blank")}
                           >
-                            View Project
+                            View Demo
                           </button>
                         </div>
                       </div>
                       <div className="project__item__img">
+                         <ul className="technology__container">
+                          {project.technology.map((tech, idx) => (
+                            <li key={idx}>
+                              {tech}
+                            </li>
+                          ))}
+                        </ul>
                         <img src={project.img} alt="slide image" />
                       </div>
                     </div>
@@ -217,12 +178,12 @@ const Portfolio = () => {
           </div>
         </div>
       </div>
-      <CustomModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+      {/* <CustomModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
         <div
           className="portfolio__modal__content scroll__hidden"
           dangerouslySetInnerHTML={{ __html: project }}
         />
-      </CustomModal>
+      </CustomModal> */}
     </>
   );
 };

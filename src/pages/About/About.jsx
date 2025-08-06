@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "./About.css";
-import profile from "../../assets/profile2.jpg";
+// import profile from "../../assets/profile2.jpg";
 import CustomModal from "../../components/CustomModal/CustomModal";
 import AboutUsDetails from "../../components/AboutUsDetails/AboutUsDetails";
+import profile from '../../assets/profile3.jpg'
 const About = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
